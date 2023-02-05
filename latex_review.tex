@@ -1,0 +1,109 @@
+
+
+\documentclass{article}
+\usepackage{amssymb,amsmath}
+% useful: http://tug.ctan.org/info/short-math-guide/short-math-guide.pdf
+\begin{document}
+This is an inline formula $ 3 + 3 $
+
+So is this: \(3+3\)
+
+This is a displayed equation, unnumbered.
+\[3+3\]
+
+So is this:
+\begin{equation*}
+3+3
+\end{equation*}
+
+
+This is a displayed equation, numbered.
+\begin{equation}
+3+3
+\end{equation}
+
+So is this
+\begin{equation}
+3+3
+\end{equation}
+
+\begin{equation}\label{xx} % label here, if we want to reference this equation by some other tag. \eqref to ref manually tagged equations. , \eqref{ax1}
+\begin{split}
+a& =b+c-d\\
+& \quad +e-f\\
+& =g+h\\
+& =i
+\end{split}
+\end{equation}
+
+\begin{multline}
+a+b+c+d+e+f\\
++i+j+k+l+m+n\\
++o+p+q+r+s
+\end{multline}
+
+\begin{gather}
+a_1=b_1+c_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather}
+
+\begin{align}
+a_1& =b_1+c_1\\
+a_2& =b_2+c_2-d_2+e_2
+\end{align}
+
+\begin{align}
+a_{11}& =b_{11}&
+a_{12}& =b_{12}\\
+a_{21}& =b_{21}&
+a_{22}& =b_{22}+c_{22}
+\end{align}
+
+\begin{alignat}{2}
+a_1& =b_1+c_1& &+e_1-f_1\\
+a_2& =b_2+c_2&{}-d_2&+e_2
+\end{alignat}
+
+\begin{flalign} %full length, occupying full width often begins at left margin
+a_{11}& =b_{11}&
+a_{12}& =b_{12}\\
+a_{21}& =b_{21}&
+a_{22}& =b_{22}+c_{22}
+\end{flalign}
+
+% * to any primary environment will supress equation numbering.
+
+
+\begin{equation}\label{first}
+a=b+c
+\end{equation}
+some intervening text
+\begin{subequations}\label{grp} % sub equations here to do subnumbering
+\begin{align}
+a&=b+c\label{second}\\
+d&=e+f+g\label{third}\\
+h&=i+j\label{fourth}
+\end{align}
+\end{subequations}
+
+
+% Matrices:
+\begin{equation}
+\begin{pmatrix}
+\alpha& \beta^{*}\\
+\gamma^{*}& \delta
+\end{pmatrix}
+\end{equation}
+
+% fractions
+\begin{equation}
+\frac{1}{k}\log_2 c(f),\quad\dfrac{1}{k}\log_2 c(f),
+\quad\tfrac{1}{k}\log_2 c(f)
+\end{equation}
+
+%binomial
+\begin{equation}
+2^k-\binom{k}{1}2^{k-1}+\binom{k}{2}2^{k-2}
+\end{equation}
+
+\end{document}
